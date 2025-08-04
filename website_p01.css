@@ -48,7 +48,7 @@ body {
 }
 
 .accordion-body table td:hover {
-    background-color: antiquewhite;
+    background-color: #3CB371;
 }
 
 .accordion-body {
@@ -67,7 +67,7 @@ body {
 }
 
 #aboutme {
-    background-color: #31384a;
+    background-color: #3B5D3B;
     color: #FFFFFF;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -96,4 +96,47 @@ body {
     top: 0;
     left: 100%;
   }
+}
+
+/* 原始連結樣式（延續 navbar-light 預設黑字） */
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0, 0, 0, 0.8);  /* 原本字體略深 */
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* 滑鼠移過去變綠色背景 + 白字 */
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #ffffff;
+    background-color: #3CB371; /* 草綠色 */
+    border-radius: 5px;
+}
+
+/* 下拉選單項目的 hover */
+.navbar-light .dropdown-menu .dropdown-item:hover {
+    background-color: #3CB371;
+    color: #ffffff;
+}
+
+.navbar {
+    background-color: #f8f9fa; /* Bootstrap 預設 navbar-light 背景 */
+}
+
+
+/* 初始 navbar 較高 */
+.navbar {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+/* 縮小狀態（滾動後套上這個類別） */
+.navbar.shrink {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgba(255, 255, 255, 0.95); /* 也可改透明 */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 下陰影更有層次感 */
+}
+
+a {
+    text-decoration: none;
 }
