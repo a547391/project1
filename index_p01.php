@@ -18,104 +18,84 @@
 
 <body>
     <section id="header">
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="images/logo.jpg" class="img-fluid rounded-circle" alt="自行車"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">會員註冊</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">會員登入</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">會員中心</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">最新活動</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">查訂單</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">折價券</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">購物車</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                企業專區
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">認識企業文化</a></li>
-                                <li><a class="dropdown-item" href="#">全台門市資訊</a></li>
-                                <li><a class="dropdown-item" href="#">供應商報價服務</a></li>
-                                <li><a class="dropdown-item" href="#">加盟專區</a></li>
-                                <li><a class="dropdown-item" href="#">投資人專區</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        
 
 
-    </section>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container-fluid">
+
+    <!-- LOGO -->
+    <a class="navbar-brand" href="#">
+      <img src="images/logo.jpg" class="img-fluid rounded-circle" alt="自行車" style="height: 40px;">
+    </a>
+
+    <!-- 漢堡選單（手機用） -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- 導覽連結＋搜尋欄 -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <!-- 導覽列 -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <?php multiList02(); ?>
+        <?php
+        function multiList02()
+        {
+          global $link;
+          $SQLstring = "SELECT * FROM pyclass WHERE level=1 ORDER BY sort";
+          $pyclass01 = $link->query($SQLstring);
+          while ($pyclass01_Rows = $pyclass01->fetch()) {
+        ?>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button"
+                 data-bs-toggle="dropdown" aria-expanded="false">
+                <?= $pyclass01_Rows['cname']; ?>
+              </a>
+              <ul class="dropdown-menu">
+                <?php
+                $SQLstring = sprintf("SELECT * FROM pyclass WHERE level=2 AND uplink=%d ORDER BY sort", $pyclass01_Rows['classid']);
+                $pyclass02 = $link->query($SQLstring);
+                while ($pyclass02_Rows = $pyclass02->fetch()) {
+                ?>
+                  <li><a class="dropdown-item" href="#">
+                      <em class="fas <?= $pyclass02_Rows['fonticon']; ?> fa-tw"></em>
+                      <?= $pyclass02_Rows['cname']; ?>
+                  </a></li>
+                <?php } ?>
+              </ul>
+            </li>
+        <?php
+          }
+        }
+        ?>
+
+        <li class="nav-item"><a class="nav-link" href="#">會員註冊</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">會員登入</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">會員中心</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">企業專區</a></li>
+      </ul>
+
+      <!-- 搜尋欄 -->
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+
+    </div>
+  </div>
+</nav>
+
+    </Section>
     <Section id="content">
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-2">
-                    <div class="sidebar">
-                        <form action="" name="search" id="search" method="get">
-                            <div class="input-group">
-                                <input type="text" name="search_name" class="form-control" placeholder="Search...">
-                                <span class="input-group-btn"><button class="btn btn-default" type="submit"><i class="fas fa-search fa-lg"></i></button></span>
-                            </div>
-                        </form>
-                    </div>
-                    <?php
-                    // 列出產品顏別第一層
-                    $SQLstring = "SELECT * FROM pyclass WHERE level=1 ORDER BY sort";
-                    $pyclass01 = $link->query($SQLstring);
-                    $i = 1; //控制編號順序
-                    ?>
-                    <div class="accordion" id="accordionExample">
-                        <?php while ($pyclass01_Rows = $pyclass01->fetch()) { ?>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingOne<?php echo $i; ?>">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne<?php echo $i; ?>" aria-expanded="true" aria-controls="collapseOne<?php echo $i; ?>">
-                                        <i class="fas <?php echo $pyclass01_Rows['fonticon']; ?> fa-lg fa-fw"></i><?php echo $pyclass01_Rows['cname']; ?>
-                                    </button>
-                                </h2>
-                                <?php
-                                //列出產品類別對映的第二層資料
-                                $SQLstring = sprintf("SELECT * FROM pyclass WHERE level=2 AND uplink=%d ORDER BY sort", $pyclass01_Rows['classid']);
-                                $pyclass02 = $link->query($SQLstring);
-                                ?>
-                                <div id="collapseOne<?php echo $i; ?>" class="accordion-collapse collapse <?php echo ($i == 1) ? 'show' : ''; ?>" aria-labelledby="headingOne<?php echo $i; ?>" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <table class="table">
-                                            <tbody>
-                                                <?php while ($pyclass02_Rows = $pyclass02->fetch()) {  ?>
-                                                    <tr>
-                                                        <td><a href="#"><em class="fas <?php echo $pyclass02_Rows['fonticon']; ?> fa-tw"></em><?php echo $pyclass02_Rows['cname']; ?></a></td>
-                                                    </tr>
-                                                <?php } ?>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        <?php $i++;
-                        } ?>
-                    </div>
+            <div class="row">               
+
                 </div>
-                <div class="col-md-10">
+                <div class="col-md-12">
                     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -127,9 +107,9 @@
                             <div class="carousel-item active">
                                 <img src="./product_img/pic1.jpg" class="d-block w-100" alt="美利達「電輔車」賞車會">
                                 <div class="carousel-caption d-none d-md-block">
-                                    <!-- <h5>美利達「電輔車」賞車會</h5>
+                                    <h5>美利達「電輔車」賞車會</h5>
                                     <p>購物金活動採單日累計消費滿額即可參加登記送活動，活動期間僅需登記一次，部分商品不適用，詳見說明。
-                                    </p> -->
+                                    </p>
                                 </div>
                             </div>
                             <div class="carousel-item">
@@ -249,48 +229,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="row text-center">
-                        <div class="card col-md-3">
-                            <img src="./product_img/pic0301.jpg" class="card-img-top" alt="EVE'S 魔術性感美唇膏">
-                            <div class="card-body">
-                                <h5 class="card-title">EVE'S 魔術性感美唇膏</h5>
-                                <p class="card-text">魔術性感美唇膏，不沾杯超持久唇色，想不到的魔術效果持續久久。</p>
-                                <p class="card-text">NT580</p>
-                                <a href="#" class="btn btn-secondary">更多資訊</a>
-                                <a href="#" class="btn btn-warning">放購物車</a>
-                            </div>
-                        </div>
-                        <div class="card col-md-3">
-                            <img src="./product_img/pic0302.jpg" class="card-img-top" alt="DMC三合一精華霜">
-                            <div class="card-body">
-                                <h5 class="card-title">DMC三合一精華霜</h5>
-                                <p class="card-text">DMC 欣蘭 水透透三合一凝凍 洗卸/面膜/精華霜 150g。</p>
-                                <p class="card-text">NT850</p>
-                                <a href="#" class="btn btn-secondary">更多資訊</a>
-                                <a href="#" class="btn btn-warning">放購物車</a>
-                            </div>
-                        </div>
-                        <div class="card col-md-3">
-                            <img src="./product_img/pic0303.jpg" class="card-img-top" alt="森下仁丹整晚貼眼膜">
-                            <div class="card-body">
-                                <h5 class="card-title">森下仁丹整晚貼眼膜</h5>
-                                <p class="card-text">日本森下仁丹整晚貼眼膜 5對/盒，長效整晚貼，慢速釋放保濕因子。</p>
-                                <p class="card-text">NT300</p>
-                                <a href="#" class="btn btn-secondary">更多資訊</a>
-                                <a href="#" class="btn btn-warning">放購物車</a>
-                            </div>
-                        </div>
-                        <div class="card col-md-3">
-                            <img src="./product_img/pic0304.jpg" class="card-img-top" alt="【美爽爽】泡泡染">
-                            <div class="card-body">
-                                <h5 class="card-title">【美爽爽】泡泡染</h5>
-                                <p class="card-text">【美爽爽】泡泡染BUBBLE COLOR系列，任意顏色，買五送二。</p>
-                                <p class="card-text">NT3250</p>
-                                <a href="#" class="btn btn-secondary">更多資訊</a>
-                                <a href="#" class="btn btn-warning">放購物車</a>
-                            </div>
-                        </div>
-                    </div> -->
                     <div class="row mt-2">
                         <nav aria-label="Page navigation example">
                             <ul class="pagination justify-content-center">
@@ -371,18 +309,19 @@
         crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const navbar = document.querySelector(".navbar");
+        document.addEventListener("DOMContentLoaded", function() {
+            const navbar = document.querySelector(".navbar");
 
-    window.addEventListener("scroll", function () {
-        if (window.scrollY > 50) {
-            navbar.classList.add("shrink");
-        } else {
-            navbar.classList.remove("shrink");
-        }
-    });
-});
-</script>
+            window.addEventListener("scroll", function() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add("shrink");
+                } else {
+                    navbar.classList.remove("shrink");
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript" src="gotop.js"></script>
 </body>
 
 </html>

@@ -116,27 +116,3 @@ body {
     background-color: #3CB371;
     color: #ffffff;
 }
-
-.navbar {
-    background-color: #f8f9fa; /* Bootstrap 預設 navbar-light 背景 */
-}
-
-
-/* 初始 navbar 較高 */
-.navbar {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    transition: all 0.3s ease;
-}
-
-/* 縮小狀態（滾動後套上這個類別） */
-.navbar.shrink {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    background-color: rgba(255, 255, 255, 0.95); /* 也可改透明 */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 下陰影更有層次感 */
-}
-
-a {
-    text-decoration: none;
-}
