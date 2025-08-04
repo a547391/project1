@@ -1,0 +1,196 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Chiron+Hei+HK:ital,wght@0,200..900;1,200..900&display=swap');
+
+
+lang="zh-TW"
+
+<title>自行車
+logo來源：
+https://zh.pngtree.com/freepng/comicstyle-pictogram-of-a-bicycle-icon-depicting-a-cartoon-bike-representing-a-transportation-business-concept-vector_12430329.html
+
+navbar
+會員註冊
+會員登入
+會員中心
+最新活動
+查訂單
+折價券
+購物車
+企業專區
+    認識我們
+    全台門市據點
+    經銷 / 合作諮詢
+    聯絡窗口
+	
+sidebar 分類項目
+<i class="fas fa-bicycle fa-lg fa-fw"></i> 自由騎旅專區
+    - 公路車  <i class="fas fa-road fa-fw"></i>
+    - 登山車  <i class="fas fa-mountain fa-fw"></i>
+    - 通勤休閒車  <i class="fas fa-city fa-fw"></i>
+    - 小折 / 旅行車  <i class="fas fa-suitcase-rolling fa-fw"></i>
+    - 電動登山車  <i class="fas fa-mountain fa-fw"></i><i class="fas fa-bolt fa-xs text-warning ml-1"></i>
+    - 電動休閒車  <i class="fas fa-city fa-fw"></i><i class="fas fa-bolt fa-xs text-warning ml-1"></i>
+
+
+<i class="fas fa-cogs fa-lg fa-fw"></i> 人身部品
+    - 零配件  <i class="fas fa-tools fa-fw"></i>
+    - 商品配件 <i class="fas fa-box-open fa-fw"></i>
+    - 人身部品 <i class="fas fa-tshirt fa-fw"></i>
+
+
+<i class="fas fa-newspaper fa-fw"></i> 部落格
+    - 挑選人生的第一台車  <i class="fas fa-child fa-fw"></i>
+    - MBTI人格要如何挑選公路車？  <i class="fas fa-brain fa-fw"></i>
+
+
+carousel
+pic1.jpg
+alt=美利達「電輔車」賞車會
+h3=美利達「電輔車」賞車會
+//購物金活動採單日累計消費滿額即可參加登記送活動，活動期間僅需登記一次，部分商品不適用，詳見說明。
+來源：https://www.merida-bikes.com/zh-tw/
+
+pic2.jpg
+alt=美利達單車DIY夏令營
+h3=美利達單車DIY夏令營
+//黑金鑽土雞18小時純粹滴煉，去油濾渣無膽固醇，殺菌包裝常溫保存，含BACC、雙肌肽、牛磺酸、小分子蛋白質等，可單飲或當高湯華陀扶元堂養生飲品系列3折優惠，歡迎選購
+來源：https://www.merida-bikes.com/zh-tw/
+
+pic3.jpg
+alt=GIANT新車賞遊會
+h3=GIANT新車賞遊會
+//保養界的藝術品！內到外優雅自成一格，堅持保養始於自然，升級膚質0負擔，讓肌膚與生活更美好。源自台灣的國際保養品牌！
+來源：https://www.giant-bicycles.com/tw
+
+pic4.jpg
+alt=GIANT Father's Day
+h3=GIANT Father's Day
+//保養界的藝術品！內到外優雅自成一格，堅持保養始於自然，升級膚質0負擔，讓肌膚與生活更美好。源自台灣的國際保養品牌！
+來源：https://www.giant-bicycles.com/tw/news/article/29964
+
+content
+pic0101.jpg
+alt=MERIDA ONE-FORTY 10K
+h3=MERIDA ONE-FORTY 10K
+140mm全新FAST避震平台的全碳纖維旗艦林道車，飛躍穿梭於林道之間，展現獨具魅力的騎乘風格。
+NT299,000
+來源：https://www.merida-bikes.com/zh-tw/bike/4059/one-forty-10k
+
+buttom
+更多資訊
+放購物車
+
+pic0102.jpg
+alt=MERIDA NINETY-SIX 6000 22'
+h3=MERIDA NINETY-SIX 6000 22'
+CF4碳纖車體的優質選擇，保有升級空間，但爬坡效率依舊亮眼，樂趣不減，荷包更省！
+NT128,000
+來源：https://www.merida-bikes.com/zh-tw/bike/3023/ninety-six-6000-22
+
+pic0103.jpg
+alt=MERIDA BIG.NINE TR 5000 25'
+h3=MERIDA BIG.NINE TR 5000 25'
+無懈可擊的攻坡性能和輕量化設計，下坡時則展現傑出的硬尾登山車風範。
+NT75,000
+https://www.merida-bikes.com/zh-tw/bike/4729/bignine-tr-5000-25
+
+pic0104.jpg
+alt=MERIDA BIG.NINE 100 25'
+h3=MERIDA BIG.NINE 100 25'
+鋁合金 29 吋硬尾車，配備100mm氣壓避震前叉，提升舒適度和控制力。
+NT23,800
+https://www.merida-bikes.com/zh-tw/bike/4721/bignine-100-25
+
+
+pic0201.jpg
+alt=GIANT Trance X Advanced Pro 29 1
+h3=GIANT Trance X Advanced Pro 29 1
+從快速、喧鬧的下坡到技術地形，這款漸進式越野自行車為您提供主動懸架、可調節車架幾何形狀以及提升單軌比賽所需的一切。
+NT178,000 
+https://www.giant-bicycles.com/tw/trance-x-advanced-pro-29-1-2023
+
+pic0202.jpg
+alt=GIANT Faith
+h3=GIANT Faith
+小巧但強大，這款高性能的越野自行車專為胸有大志的騎士所設計。輕量合金車架、高性能輪組和專門調校的懸吊避震系統，能在高效爬坡、抓地力和操控之間取得平衡。
+NT62,800
+https://www.giant-bicycles.com/tw/faith
+
+pic0203.jpg
+alt=GIANT XTC Advanced 29 3
+h3=GIANT XTC Advanced 29 3
+採用輕量碳纖維車架，搭配29吋輪徑，提升越野穩定性與效率。適合登山越野與長距離騎乘，兼具剛性與舒適性，操控靈活。
+NT$52,800
+https://www.giant-bicycles.com/tw/xtc-advanced-29-3
+
+pic0204.jpg
+alt=ATX
+h3=ATX
+別賴在家裡了！跨上ATX，從柏油路到泥土路，不僅休閒，也兼具運動健身；專注於雙腳踩踏間，所有疲憊與煩惱都將煙消雲散，騎動健康從現在開始做起!
+NT$8,800
+https://www.giant-bicycles.com/tw/atx-2024
+
+pic0301.jpg
+alt=EVE'S 魔術性感美唇膏
+h3=EVE'S 魔術性感美唇膏
+魔術性感美唇膏，不沾杯超持久唇色，想不到的魔術效果持續久久。
+NT580
+
+pic0302.jpg
+alt=DMC三合一精華霜
+h3=DMC三合一精華霜
+DMC 欣蘭 水透透三合一凝凍 洗卸/面膜/精華霜 150g。
+NT850
+
+pic0303.jpg
+alt=森下仁丹整晚貼眼膜
+h3=森下仁丹整晚貼眼膜
+日本森下仁丹整晚貼眼膜 5對/盒，長效整晚貼，慢速釋放保濕因子。
+NT300
+
+pic0304.jpg
+alt=【美爽爽】泡泡染
+h3=【美爽爽】泡泡染
+【美爽爽】泡泡染BUBBLE COLOR系列，任意顏色，買五送二。
+NT3250
+
+Scontent
+img ="images/QRcode02.png" alt="QRcode">
+
+<i class="fas fa-thumbs-up fa-5x"></i>
+  關於我們
+  關於本平台
+  經營理念
+  綠色運動倡議
+
+
+<i class="fas fa-truck fa-5x"></i>
+  配送與服務
+  物流追蹤
+  退換貨政策
+  客製化裝備諮詢
+
+<i class="fas fa-users fa-5x"></i>
+  客戶中心
+  訂單查詢
+  購物須知
+  聯絡客服
+  常見問答 FAQ
+
+fas fa-comments-dollar fa-5x
+好康大放送
+新會員禮包
+活動得獎名單
+
+<i class="fas fa-gift fa-5x"></i>
+  優惠專區
+  首購禮包
+  每月限量組合
+  分享送折扣
+
+footer
+  健行數位有限公司 BikeLine Inc.  
+  台中市西區健騎路168號  
+  客服專線：04-12345678｜免付費專線：0800-889900  
+  本站已通過 SSL 與 PCI-DSS 安全認證  
+  © 2025 BikeLine All Rights Reserved.
+</footer>
