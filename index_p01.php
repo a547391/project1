@@ -2,13 +2,14 @@
 <?php require_once('Connections/dbset.php'); ?>
 <!-- 如果SESSION沒有啟動，則啟動SEEION功能，這是跨網頁變數存取  -->
 <?php (!isset($_SESSION)) ? session_start() : ""; ?>
+<!-- 載入共用PHP函數庫 -->
+<?php require_once("php_lib.php"); ?>
 <!doctype html>
 <html lang="zh-TW">
 
 <head>
     <!-- 引入網頁標頭 -->
     <?php require_once("headfile.php"); ?>
-
 </head>
 
 <body>
@@ -16,8 +17,19 @@
         <!-- 引入導覽列 -->
         <?php require_once("navbar.php"); ?>
     </Section>
-    <!-- 引入content -->
-    <?php require_once("content.php"); ?>
+    <Section id="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-10">
+                    <!-- 引入廣告輪播 -->
+                    <?php require_once("carousel.php"); ?>
+                    <hr>
+                    <!-- 引入 product藥粧商品-->
+                    <?php require_once("product_list.php"); ?>
+                </div>
+            </div>
+        </div>
+    </Section>
     <hr>
     <Section id="scontent">
         <div class="container-fluid">
@@ -69,19 +81,6 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const navbar = document.querySelector(".navbar");
-
-            window.addEventListener("scroll", function() {
-                if (window.scrollY > 50) {
-                    navbar.classList.add("shrink");
-                } else {
-                    navbar.classList.remove("shrink");
-                }
-            });
-        });
-    </script>
     <script type="text/javascript" src="gotop.js"></script>
 </body>
 

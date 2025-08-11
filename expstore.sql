@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2025-08-04 02:30:36
+-- 產生時間： 2025-08-10 15:44:00
 -- 伺服器版本： 10.4.32-MariaDB
 -- PHP 版本： 8.2.12
 
@@ -54,6 +54,16 @@ CREATE TABLE `carousel` (
   `p_id` int(10) NOT NULL COMMENT '產品編號',
   `create_date` timestamp NOT NULL DEFAULT current_timestamp() COMMENT '建立日期'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- 傾印資料表的資料 `carousel`
+--
+
+INSERT INTO `carousel` (`caro_id`, `caro_title`, `caro_content`, `caro_online`, `caro_sort`, `caro_pic`, `p_id`, `create_date`) VALUES
+(1, '雙11正式開跑 SOFINA全館5折起 - SOFINA 限時特惠', 'SOFINA iP限定組合下殺39折起，加碼再送『iP美容液30g』，全館滿額再享現金回饋。[雙11正式開跑]SOFINA 全年最低價，全館最低5折起。', 1, 1, 'pic0.jpg', 13, '2025-08-10 12:49:31'),
+(2, '建康養生的好幫手', '華陀扶元堂養生飲品系列3折優惠，歡迎選購', 1, 2, 'pic2.jpg', 49, '2025-08-10 12:50:46'),
+(3, '頂級保濕面膜，臉部滋養的好幫手', 'My Beauty Diary熱銷7款面膜特價優惠，歡迎選購', 1, 3, 'pic3.jpg', 50, '2025-08-10 12:51:13'),
+(4, '慶祝媽媽節特惠方案', '為感恩全天下辛苦的母親節特別推出一系列優惠專案', 0, 4, 'pic1.jpg', 51, '2025-08-10 12:51:40');
 
 -- --------------------------------------------------------
 
@@ -755,7 +765,7 @@ ALTER TABLE `addbook`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `carousel`
 --
 ALTER TABLE `carousel`
-  MODIFY `caro_id` int(3) NOT NULL AUTO_INCREMENT COMMENT '輪播編號';
+  MODIFY `caro_id` int(3) NOT NULL AUTO_INCREMENT COMMENT '輪播編號', AUTO_INCREMENT=5;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `cart`

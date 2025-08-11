@@ -2,9 +2,9 @@
 
 
 body {
-  font-family: 'Chiron Hei HK', Arial, 'LXGW WenKai Mono TC', sans-serif;
-  font-size: 16px;
-  padding-top: 60px;
+    font-family: 'Chiron Hei HK', Arial, 'LXGW WenKai Mono TC', sans-serif;
+    font-size: 16px;
+    padding-top: 60px;
 }
 
 .navbar {
@@ -72,7 +72,8 @@ body {
     padding-top: 30px;
     padding-bottom: 30px;
 }
-#last-data{
+
+#last-data {
     height: 100px;
     background-color: #b4b4b4;
     padding-top: 10px;
@@ -80,34 +81,36 @@ body {
 
 .dropdown:hover>.dropdown-menu,
 .dropend:hover>.dropdown-menu {
-  display: block;
-  margin-top: 0.125em;
-  margin-left: 0.125em;
-  margin-right: 80%;
+    display: block;
+    margin-top: 0.125em;
+    margin-left: 0.125em;
+    margin-right: 80%;
 }
 
 .dropdown .dropdown-menu {
-  display: none;
+    display: none;
 }
 
 @media screen and (min-width: 993px) {
-  .dropend:hover>.dropdown-menu {
-    position: absolute;
-    top: 0;
-    left: 100%;
-  }
+    .dropend:hover>.dropdown-menu {
+        position: absolute;
+        top: 0;
+        left: 100%;
+    }
 }
 
 /* 原始連結樣式（延續 navbar-light 預設黑字） */
 .navbar-light .navbar-nav .nav-link {
-    color: rgba(0, 0, 0, 0.8);  /* 原本字體略深 */
+    color: rgba(0, 0, 0, 0.8);
+    /* 原本字體略深 */
     transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 /* 滑鼠移過去變綠色背景 + 白字 */
 .navbar-light .navbar-nav .nav-link:hover {
     color: #ffffff;
-    background-color: #3CB371; /* 草綠色 */
+    background-color: #3CB371;
+    /* 草綠色 */
     border-radius: 5px;
 }
 
@@ -115,4 +118,70 @@ body {
 .navbar-light .dropdown-menu .dropdown-item:hover {
     background-color: #3CB371;
     color: #ffffff;
+}
+
+/*
+* 輪播按鈕樣式
+*/
+
+/* 調整 .carousel-caption 的 flexbox 屬性，讓內容可以對齊 */
+.carousel-caption {
+    top: 0;
+    /* 讓容器頂部與父層對齊 (← 這裡修正) */
+    bottom: auto;
+    /* 移除底部對齊 */
+    left: 0;
+    right: 0;
+    padding: 50px 50px 0 50px;
+    /* 增加四邊的間距，讓按鈕不會貼邊 (← 這裡修正) */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* 將內容推到最上方 (← 這裡修正) */
+    align-items: flex-end;
+    /* 讓內容靠右對齊 */
+    text-align: right;
+    /* 文字也靠右對齊 */
+}
+
+/* 自訂的輪播按鈕樣式 */
+.btn-carousel {
+    display: inline-block;
+    padding: 12px 30px;
+    margin-top: 15px;
+    background-color: #3CB371;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    border: 2px solid #3CB371;
+    transition: all 0.3s ease;
+}
+
+/* 滑鼠懸停效果 */
+.btn-carousel:hover {
+    background-color: #fff;
+    color: #3CB371;
+}
+
+/* 確保小螢幕時文字大小適中 */
+@media screen and (max-width: 767px) {
+    .carousel-caption {
+        padding: 20px 20px 0 20px;
+        /* 小螢幕的間距 */
+    }
+
+    .carousel-caption h5 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+
+    .btn-carousel {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
 }
