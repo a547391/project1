@@ -53,7 +53,7 @@
                         <li class="nav-item"><a class="nav-link" href="#">會員註冊</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">會員登入</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">會員中心</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">企業專區</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">購物車</a></li>
                     </ul>
 
                     <!-- 搜尋欄 -->
